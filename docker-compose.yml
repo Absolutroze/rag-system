@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build: .
+    container_name: fastapi-app
+    ports:
+      - "8000:80"  # Exposes FastAPI on port 8000
+    volumes:
+      - .:/app  # Mount the current directory to the container's /app folder
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - app-network
+
+  faiss:
+    image: daangn/faiss 
+    container_name: faiss-db
+    networks:
+      - app-network
+
+  ollama:
+    image: ollama/ollama  
+    container_name: ollama-container
+    networks:
+      - app-network
+    environment:
+      - OLLAMA_API_KEY=your-api-key-here  # Set up any necessary environment variables for Ollama
+
+networks:
+  app-network:
+    driver: bridge

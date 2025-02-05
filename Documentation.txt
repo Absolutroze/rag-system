@@ -1,0 +1,37 @@
+1. cd C:\Users\yvonn\RAG System_Kuasar
+2. python -m venv venv
+3. venv\Scripts\activate
+4. notepad app.py
+5. code app.py
+6. python app.py
+7. python -m ensurepip --upgrade
+8. pip install langchain-community
+9. pip install llama_index
+10. pip install flask
+11. pip install fastembed
+12. pip install pdfplumber
+13. pip install faiss-cpu
+14. pip install numpy
+15. pip install -U langchain langchain-community
+16. pip install fastapi
+17. pip install uvicorn
+18. pip install python-multipart
+19. pip install langchain-ollama
+
+
+
+uvicorn app:app --reload
+
+http://127.0.0.1:8000/docs#/
+http://localhost:8000
+
+
+docker-compose build
+
+docker-compose up
+
+docker-compose down
+
+
+
+

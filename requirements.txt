@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+faiss-cpu
+numpy
+langchain
+langchain-ollama
+langchain-community
+pydantic
+pdfplumber
+python-multipart
